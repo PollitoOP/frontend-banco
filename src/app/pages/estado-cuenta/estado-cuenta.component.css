@@ -1,0 +1,54 @@
+/* Colores y fuentes consistentes */
+.text-green {
+  color: #2e7d32;
+}
+
+.btn-green {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #fbc02d;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #f9a825;
+  color: #fff;
+}
+
+/* Footer fijo abajo */
+.footer {
+  background-color: #2e7d32;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Tabla estilo refinado */
+.table thead th {
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.table a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.table a:hover {
+  text-decoration: underline;
+}
+
+/* Borde y sombreado suave */
+.table-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}

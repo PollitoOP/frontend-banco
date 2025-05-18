@@ -1,0 +1,53 @@
+<!-- Header centrado -->
+<header class="text-center p-3 shadow-sm bg-white">
+  <h1 class="text-green m-0">BANCO SEGURO</h1>
+</header>
+
+<!-- Cuerpo principal -->
+<main class="container my-5">
+
+  <!-- Encabezado con información y botón salir -->
+  <div class="d-flex justify-content-between align-items-center bg-light p-3 shadow-sm rounded mb-4">
+    <div>
+      <h5 class="text-green fw-bold mb-1">Banca Electrónica</h5>
+      <div>
+        <strong>FRANKLIN ORELLANA</strong> - 1104779044<br>
+        <small class="text-muted">Fecha/Hora último acceso: 2025/05/17 - 11:47:08</small>
+      </div>
+    </div>
+    <button class="btn btn-warning fw-bold" [routerLink]="['/']">
+      <i class="bi bi-box-arrow-right me-1"></i> SALIR
+    </button>
+  </div>
+
+  <!-- Título de sección -->
+  <h5 class="text-success fw-bold border-bottom pb-2 mb-3">Posición Consolidada</h5>
+
+  <!-- Tabla de datos -->
+  <div class="table-responsive shadow-sm rounded">
+    <table class="table table-bordered text-center align-middle">
+      <thead class="table-success">
+        <tr>
+          <th>Tipo Cliente</th>
+          <th>Tipo Cuenta</th>
+          <th>Nro. Cuenta</th>
+          <th>Saldo Disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TITULAR</td>
+          <td>CUENTA ACTIVA</td>
+          <td><a class="text-success fw-semibold">2901788669</a></td>
+          <td>$40,72</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer text-center text-white p-3">
+  © 2025 Banco Seguro - Todos los derechos reservados
+</footer>

@@ -1,0 +1,101 @@
+<!-- Header centrado -->
+<header class="text-center p-3 shadow-sm bg-white">
+  <h1 class="text-green m-0">BANCO SEGURO</h1>
+</header>
+
+<!-- Cuerpo principal -->
+<main class="container my-5">
+  <div class="row justify-content-center align-items-start">
+    <!-- Columna izquierda: texto + íconos -->
+    <div class="col-md-5 pe-md-4">
+      <h2 class="text-secondary fw-bold">BANCA ELECTRÓNICA</h2>
+      <p class="text-justify mt-3 fs-5">
+        La Banca Electrónica de Banco Seguro, trabajamos de forma continua
+        para garantizar la seguridad de nuestros clientes. Por ello hemos
+        implementado un nuevo sistema de seguridad. Si usted no tiene clave de
+        acceso a este canal, solicítela en cualquiera de nuestras oficinas.
+      </p>
+
+      <div class="d-flex justify-content-around mt-4 text-center">
+        <div>
+          <i class="bi bi-info-circle fs-3"></i>
+          <p class="mt-2">AYUDA</p>
+        </div>
+        <div>
+          <i class="bi bi-shield-lock fs-3"></i>
+          <p class="mt-2">SEGURIDAD</p>
+        </div>
+        <div>
+          <i class="bi bi-telephone fs-3"></i>
+          <p class="mt-2">CONTACTO</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Separador -->
+    <div class="col-md-1 d-none d-md-flex justify-content-center">
+      <div class="separator"></div>
+    </div>
+
+    <!-- Columna derecha: formulario de ingreso -->
+    <div class="col-md-5 ps-md-4 mt-4 mt-md-0">
+      <div class="p-4 rounded shadow bg-light">
+        <div class="mb-3">
+          <label for="usuario" class="form-label"><strong>Usuario:</strong></label>
+          <input
+            type="text"
+            id="usuario"
+            class="form-control bg-warning-subtle border border-secondary"
+          />
+        </div>
+
+        <!-- Campo de contraseña con ícono -->
+        <div class="mb-3 position-relative">
+          <label for="clave" class="form-label"><strong>Contraseña:</strong></label>
+          <input
+            [type]="hidePassword ? 'password' : 'text'"
+            id="clave"
+            class="form-control bg-warning-subtle border border-secondary pe-5"
+          />
+          <i
+            class="bi"
+            [ngClass]="hidePassword ? 'bi-eye-slash-fill' : 'bi-eye-fill'"
+            (click)="togglePasswordVisibility()"
+            style="
+              position: absolute;
+              top: 60%;
+              right: 15px;
+              cursor: pointer;
+              color: #2e7d32;
+            "
+          ></i>
+        </div>
+
+        <div class="d-flex justify-content-end align-items-center gap-2">
+          <button class="btn btn-green" [routerLink]="['/verificacion']">
+            Ingresar
+          </button>
+          <i class="bi bi-check-circle-fill fs-4 text-green"></i>
+        </div>
+
+        <hr />
+        <div class="d-grid gap-2 mt-3">
+          <button class="btn btn-light text-secondary border">
+            ¿Olvidó su clave?
+          </button>
+          <button class="btn btn-light text-secondary border">
+            ¿Olvidó su usuario?
+          </button>
+          <button class="btn btn-warning text-dark fw-semibold">
+            Activar Banca Electrónica
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer text-center text-white p-3">
+  © 2025 Banco Seguro - Todos los derechos reservados
+</footer>

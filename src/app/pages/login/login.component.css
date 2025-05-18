@@ -1,0 +1,38 @@
+.text-green {
+  color: #2e7d32;
+}
+
+.btn-green {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+.footer {
+  background-color: #2e7d32;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.separator {
+  width: 1px;
+  background-color: #ccc;
+  height: 100%;
+  min-height: 300px;
+}
+
+/* Para evitar que los textos se desplacen en pantallas pequeñas */
+@media (max-width: 767.98px) {
+  .separator {
+    display: none;
+  }
+}

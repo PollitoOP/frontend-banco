@@ -1,0 +1,80 @@
+<!-- Header -->
+<header class="d-flex justify-content-between align-items-center p-3 shadow-sm bg-white position-relative">
+  <h1 class="text-green position-absolute top-50 start-50 translate-middle m-0">BANCO SEGURO</h1>
+  <form class="d-flex search-form ms-auto">
+    <input type="text" class="form-control" placeholder="Buscar...">
+    <button class="btn btn-green ms-2" type="submit">Buscar</button>
+  </form>
+</header>
+
+<!-- Cuerpo principal -->
+<main class="container my-5">
+  <div class="row">
+    <!-- Carrusel -->
+    <div class="col-md-6">
+  <div id="carouselBanco" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+    
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselBanco" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+      <button type="button" data-bs-target="#carouselBanco" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+      <button type="button" data-bs-target="#carouselBanco" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+      <button type="button" data-bs-target="#carouselBanco" data-bs-slide-to="3" aria-label="Imagen 4"></button>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carousel-inner rounded shadow">
+      <div class="carousel-item active">
+        <img src="assets/imagen1.png" class="d-block w-100" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/imagen2.png" class="d-block w-100" alt="Imagen 2">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/imagen3.png" class="d-block w-100" alt="Imagen 3">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/imagen4.png" class="d-block w-100" alt="Imagen 4">
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanco" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselBanco" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+
+    <!-- Sección de Banca Electrónica -->
+    <div class="col-md-6 d-flex align-items-center">
+      <div class="w-100 p-4 rounded shadow bg-light text-center">
+        <h4 class="text-green mb-4">Banca Electrónica</h4>
+        <button class="btn btn-green w-100 mb-3" [routerLink]="['/login']">
+          <i class="bi bi-person-fill"></i> Personas
+        </button>
+        <button class="btn btn-green w-100">
+          <i class="bi bi-building"></i> Empresas
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones de acceso -->
+  <div class="row text-center mt-5 acceso-btns">
+    <div class="col">
+      <button class="btn btn-outline-green me-2"><i class="bi bi-person-fill"></i> Personas</button>
+      <button class="btn btn-outline-green me-2"><i class="bi bi-building"></i> Empresas</button>
+      <button class="btn btn-outline-green me-2"><i class="bi bi-shop"></i> Microfinanzas</button>
+      <button class="btn btn-outline-green"><i class="bi bi-credit-card-2-back-fill"></i> Tarjeta de Crédito</button>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer text-center text-white p-3">
+  © 2025 Banco Seguro - Todos los derechos reservados
+</footer>

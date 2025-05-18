@@ -1,0 +1,38 @@
+.text-green {
+  color: #2e7d32;
+}
+
+.btn-green {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+.footer {
+  background-color: #2e7d32;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.image-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  background-color: #f8f9fa;
+}
+
+.image-card p {
+  word-wrap: break-word;
+  text-align: center;
+}

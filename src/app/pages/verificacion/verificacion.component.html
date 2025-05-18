@@ -1,0 +1,89 @@
+<!-- Header centrado -->
+<header class="text-center p-3 shadow-sm bg-white">
+  <h1 class="text-green m-0">BANCO SEGURO</h1>
+</header>
+
+<!-- Cuerpo principal -->
+<main class="container my-5">
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-10">
+      <h4 class="text-green fw-bold text-center">ACCESO BANCA ELECTRÓNICA</h4>
+      <p class="mt-3 text-justify text-dark">
+        Bienvenido <strong>FRANKLIN ORELLANA</strong>:<br />
+        Por favor responda la siguiente pregunta y seleccione una imagen.
+      </p>
+    </div>
+  </div>
+
+  <!-- Pregunta y respuesta -->
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="row mb-3 align-items-end">
+        <div class="col-md-7">
+          <label class="form-label fw-semibold">Pregunta de seguridad:</label>
+          <input
+            type="text"
+            class="form-control bg-light border border-secondary"
+            value="¿Cuáles son los últimos 4 dígitos de tu número de cédula?"
+            disabled
+          />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label fw-semibold">Respuesta:</label>
+          <input
+            type="text"
+            class="form-control border border-secondary"
+            placeholder="Ingrese su respuesta"
+          />
+        </div>
+      </div>
+
+      <!-- Instrucciones -->
+      <p class="text-justify">
+        Por favor <strong>seleccione la imagen</strong> que asoció al proceso de
+        registro/actualización de información y presione el botón
+        <strong>INGRESAR</strong> para continuar.
+      </p>
+
+      <!-- Fila 1 -->
+      <div
+        class="d-flex justify-content-center gap-4 flex-wrap text-center mb-3"
+      >
+        <ng-container *ngFor="let img of imagenes.slice(0, 5)">
+          <div
+            class="image-card p-3 bg-white shadow rounded"
+            style="width: 140px"
+          >
+            <img [src]="img.src" [alt]="img.alt" width="60" height="60" />
+            <p class="mt-2 fw-semibold text-wrap mb-0">{{ img.label }}</p>
+          </div>
+        </ng-container>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="d-flex justify-content-center gap-4 flex-wrap text-center">
+        <ng-container *ngFor="let img of imagenes.slice(5)">
+          <div
+            class="image-card p-3 bg-white shadow rounded"
+            style="width: 140px"
+          >
+            <img [src]="img.src" [alt]="img.alt" width="60" height="60" />
+            <p class="mt-2 fw-semibold text-wrap mb-0">{{ img.label }}</p>
+          </div>
+        </ng-container>
+      </div>
+
+      <!-- Botón de ingreso -->
+      <div class="text-center mt-4 mb-5">
+        <button class="btn btn-green px-5" [routerLink]="['/estado-cuenta']">
+          <i class="bi bi-check-circle-fill me-2"></i>Ingresar
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer text-center text-white p-3">
+  © 2025 Banco Seguro - Todos los derechos reservados
+</footer>
