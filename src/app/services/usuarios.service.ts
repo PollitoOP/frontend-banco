@@ -24,4 +24,15 @@ export class UsuarioService {
   obtenerDetalle(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/${id}/detalle`);
   }
+
+  validarImagen(usuarioId: number, nombreImagen: string): Observable<string> {
+    const params = new HttpParams()
+      .set('usuarioId', usuarioId.toString())
+      .set('nombreImagen', nombreImagen);
+    return this.http.post(`${this.apiUrl}/validar-imagen`, null, {
+      params,
+      responseType: 'text'
+    });
+  }
+
 }

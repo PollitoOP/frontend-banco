@@ -70,6 +70,8 @@
         <ng-container *ngFor="let img of imagenes.slice(0, 5)">
           <div
             class="image-card p-3 bg-white shadow rounded"
+            [class.selected]="img.src.includes(imagenSeleccionada)"
+            (click)="seleccionarImagenDesdeSrc(img.src)"
             style="width: 140px"
           >
             <img [src]="img.src" [alt]="img.alt" width="60" height="60" />
@@ -93,9 +95,10 @@
 
       <!-- Botón de ingreso -->
       <div class="text-center mt-4 mb-5">
-        <button class="btn btn-green px-5" [routerLink]="['/estado-cuenta']">
+        <button class="btn btn-green px-5" (click)="validarImagen()">
           <i class="bi bi-check-circle-fill me-2"></i>Ingresar
         </button>
+        <p class="mt-2 text-danger fw-bold">{{ mensaje }}</p>
       </div>
     </div>
   </div>
