@@ -36,3 +36,35 @@
   word-wrap: break-word;
   text-align: center;
 }
+
+.cambiar-pregunta-minimal {
+  font-size: 0.85rem;
+  color: #2e7d32;
+  background-color: transparent;
+  border: 1px solid #2e7d32;
+  height: 38px;
+  padding: 2px 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cambiar-pregunta-minimal:hover {
+  background-color: #e8f5e9; /* verde muy claro */
+  color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.is-invalid {
+  border: 1px solid #dc3545 !important;
+  background-color: #f8d7da !important;
+}
+
+.is-valid {
+  border: 1px solid #28a745 !important;
+  background-color: #d4edda !important;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+}

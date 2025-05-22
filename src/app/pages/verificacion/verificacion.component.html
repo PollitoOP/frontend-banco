@@ -9,8 +9,8 @@
     <div class="col-md-10">
       <h4 class="text-green fw-bold text-center">ACCESO BANCA ELECTRÓNICA</h4>
       <p class="mt-3 text-justify text-dark">
-        Bienvenido <strong>FRANKLIN ORELLANA</strong>:<br />
-        Por favor responda la siguiente pregunta y seleccione una imagen.
+        Bienvenido <strong>{{ nombreUsuario.toUpperCase() }}</strong><br>
+        Por favor responda a la siguiente pregunta y seleccione una imagen para continuar.
       </p>
     </div>
   </div>
@@ -19,22 +19,40 @@
   <div class="row justify-content-center">
     <div class="col-md-10">
       <div class="row mb-3 align-items-end">
-        <div class="col-md-7">
+        <div class="col-md-5">
           <label class="form-label fw-semibold">Pregunta de seguridad:</label>
           <input
             type="text"
             class="form-control bg-light border border-secondary"
-            value="¿Cuáles son los últimos 4 dígitos de tu número de cédula?"
+            [value]="preguntaActual?.textoPregunta"
             disabled
           />
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <label class="form-label fw-semibold">Respuesta:</label>
           <input
             type="text"
             class="form-control border border-secondary"
             placeholder="Ingrese su respuesta"
+            [(ngModel)]="respuestaIngresada"
+            (input)="verificarRespuestaTiempoReal()"
+            [ngClass]="{
+              'is-invalid': respuestaCorrecta === false,
+              'is-valid': respuestaCorrecta === true
+            }"
           />
+          <div *ngIf="respuestaCorrecta === false" class="invalid-feedback">
+            {{ mensajeError }}
+          </div>
+        </div>
+
+        <div class="col-md-2 d-flex align-items-end">
+          <button
+            class="btn btn-outline-light cambiar-pregunta-minimal w-100"
+            (click)="seleccionarPreguntaAleatoria()"
+          >
+            Cambiar Pregunta
+          </button>
         </div>
       </div>
 
