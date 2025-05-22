@@ -37,7 +37,7 @@ export class LoginComponent {
         this.router.navigate(['/verificacion']);
       },
       error: () => {
-        Swal.fire('Error', 'Credenciales inválidas', 'error');
+        Swal.fire('Error', 'Credenciales incorrectas.', 'error');
       }
     });
   }

@@ -68,3 +68,29 @@
   font-size: 0.875em;
   margin-top: 0.25rem;
 }
+
+.selected-ok {
+  border: 2px solid #28a745 !important;
+  background-color: #d4edda !important;
+}
+
+.selected-error {
+  border: 2px solid #dc3545 !important;
+  background-color: #f8d7da !important;
+}
+
+
+@keyframes pulse-green {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
