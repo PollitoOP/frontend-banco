@@ -35,4 +35,8 @@ export class UsuarioService {
     });
   }
 
+  obtenerCuenta(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}/cuenta`);
+  }
+
 }

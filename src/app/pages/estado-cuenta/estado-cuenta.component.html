@@ -11,8 +11,9 @@
     <div>
       <h5 class="text-green fw-bold mb-1">Banca Electrónica</h5>
       <div>
-        <strong>FRANKLIN ORELLANA</strong> - 1104779044<br>
-        <small class="text-muted">Fecha/Hora último acceso: 2025/05/17 - 11:47:08</small>
+        <strong>{{ nombreUsuario.toUpperCase() }}</strong><br>
+        <small class="text-muted">Fecha/Hora último acceso: {{ fechaHoraActual }}</small>
+
       </div>
     </div>
     <button class="btn btn-warning fw-bold" [routerLink]="['/']">
@@ -36,10 +37,10 @@
       </thead>
       <tbody>
         <tr>
-          <td>TITULAR</td>
-          <td>CUENTA ACTIVA</td>
-          <td><a class="text-success fw-semibold">2901788669</a></td>
-          <td>$40,72</td>
+          <td>{{ cuenta?.tipoCliente }}</td>
+          <td>{{ cuenta?.tipoCuenta }}</td>
+          <td><a class="text-success fw-semibold">{{ cuenta?.numeroCuenta }}</a></td>
+          <td>${{ cuenta?.saldoDisponible }}</td>
         </tr>
       </tbody>
     </table>
