@@ -8,5 +8,5 @@ export const routes: Routes = [
   { path: '', component: PrincipalComponent },
   { path: 'login', component: LoginComponent },
   { path: 'verificacion', component: VerificacionComponent },
-  { path: 'estado-cuenta', component: EstadoCuentaComponent },
+  { path: 'estado-cuenta', component: EstadoCuentaComponent }
 ];
