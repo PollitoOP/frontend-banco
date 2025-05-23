@@ -18,6 +18,11 @@ export class EstadoCuentaComponent implements OnInit {
 
   constructor(private usuarioService: UsuarioService, private router: Router) {}
 
+  logout() {
+    localStorage.removeItem('usuarioId');
+    this.router.navigate(['/login']);
+  }
+
   ngOnInit(): void {
     const id = localStorage.getItem('usuarioId');
     if (id) {
